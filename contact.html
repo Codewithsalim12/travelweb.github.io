@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact us-Scenicwonderers</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            gap: 30px;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 9;
+        }
+
+        .link a {
+            color: black;
+            text-decoration: none;
+            margin: 12px;
+            font-size: 0.9em;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .link a:hover {
+           color: red;
+        }
+
+        .logo {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: black;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        .logo:hover {
+            color: red;
+        }
+        .logo a{
+            color: black;
+        }
+
+        .link input {
+            text-align: center;
+            width: 80px;
+            padding: 6px;
+            border: none;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            margin: 2px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        .btn {
+            background-color: rgb(67, 84, 240);
+            color: black;
+            text-align: center;
+            padding: 6px;
+            width: 80px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .btn:hover {
+            background-color: rgb(67, 84, 240);
+            color: #fff;
+        }
+
+        .btn-2 {
+            background-color: rgb(255, 11, 11);
+        }
+
+        .btn-2:hover {
+            background-color: rgb(67, 84, 240);
+        }
+
+        @media only screen and (max-width:800px) {
+            .header {
+                height: 80vh;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                background-color: #ece8e8;
+                border-radius: 2px;
+                position: unset;
+            }
+
+            .link a,
+            .logo {
+                color: black;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            gap: 60px;
+            box-sizing: border-box;
+            padding: 30px;
+            background-image: url(https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            filter: contrast(100%);
+            filter: grayscale(10%);
+        }
+
+        .box {
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            height: fit-content;
+            width: 320px;
+            box-sizing: border-box;
+            /*background-image: url(https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148881321.jpg?w=740&t=st=1705038128~exp=1705038728~hmac=bf4b50d5ff83964006a612290054185b9022eadcfa15c5e7afe18ca26aabf519);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;*/
+            border-radius: 5px;
+        }
+
+        .box2 {
+            height: fit-content;
+            width: 320px;
+            box-sizing: border-box;
+        }
+
+        @media only screen and (max-width:800px) {
+            .box2 {
+                width: 100%;
+            }
+        }
+
+        .text-1 p:first-child {
+            font-size: 2.2em;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            padding: 5px;
+            color: #000000;
+            background-color: rgb(212, 212, 240);
+            border-radius: 10px;
+            margin: 5px 10px;
+        }
+
+        .text-1 p:nth-child(2) {
+            font-size: 1em;
+            font-family: 'Josefin Sans', sans-serif;
+            line-height: 10px;
+            font-weight: bold;
+           padding: 0px 15px;
+            color: #000000;
+            text-wrap: wrap;
+        }
+
+        .text-2 {
+            background-color: #f8f2f2;
+            border-radius: 5px;
+            height: 100%;
+            width: 90%;
+            margin: 0px auto;
+            margin-top: 20px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .text-2 p {
+            box-sizing: border-box;
+            padding: 0px 5px;
+            margin: 5px;
+            line-height: 20px;
+            color: #000000;
+        }
+
+        .text-2 p img {
+            width: 20px;
+        }
+
+        .box1-footer {
+            box-sizing: border-box;
+            margin-top: 20px;
+            padding: 0px 7px;
+            text-align: center;
+        }
+
+        .box1-footer p {
+            font-size: 0.9em;
+            font-family: 'Josefin Sansa', sans-serif;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .box1-footer span img {
+            width: 17px;
+            position: relative;
+            top: 3px;
+            margin: 10px 5px;
+            filter: contrast(100%);
+        }
+
+        form {
+            box-sizing: border-box;
+            padding: 5px 50px;
+            font-family: 'Josefin Sans', sans-serif;
+            width: 101%;
+            /*background-image: url(https://img.freepik.com/free-vector/abstract-gradient-triangle-background_598544-205.jpg?t=st=1705038675~exp=1705039275~hmac=dc72d01dd9b06187f3c6d02ce888a162042b82d5fd2e3eccad708a0a0304ec13);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;*/
+        }
+
+        form #label-text {
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        #input-text {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.7em;
+            font-weight: bold;
+        }
+
+        .text {
+            margin-top: 10px;
+        }
+
+        label:after {
+            content: "*";
+        }
+
+        .custom-select {
+            font-weight: bold;
+        }
+
+        .custom-select select {
+            width: 104%;
+            border: 1px solid black;
+        }
+
+        .custom-select p {
+            font-size: 0.8em;
+        }
+
+        .custom-select p::after {
+            content: "*";
+        }
+
+        .custom-select,
+        select {
+            font-size: 0.9em;
+            font-family: 'Josefin Sans', sans-serif;
+            padding: 5px 5px;
+            box-sizing: border-box;
+            width: 110%;
+            border-radius: 2px;
+            border: none;
+            color: #030303;
+        }
+
+        .custom-select select option {
+            font-size: 0.9em;
+            font-weight: bold;
+            background-color: rgb(143, 228, 126);
+            color: #000000;
+        }
+
+        .Message {
+            font-size: 0.8em;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: bold;
+            border-radius: 2px;
+            border: none;
+            color: #000000;
+        }
+
+        form textarea {
+            font-family: 'Josefin Sansa', sans-serif;
+            font-size: 1em;
+            width: 113%;
+            height: 95px;
+            border-radius: 5px;
+            border: 1px solid black;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .message-btn {
+            margin-top: 12px;
+        }
+
+        .message-btn button {
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: rgb(231, 3, 22);
+            color: #fff;
+            padding: 6px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+        }
+
+        .message-btn button:hover {
+            background-color: rgb(5, 88, 241);
+        }
+
+        form input {
+            padding: 5px 5px;
+            box-sizing: border-box;
+            width: auto;
+            border-radius: 2px;
+            border: 1px solid black;
+        }
+
+        form label {
+            color: #000000;
+        }
+
+        .footer-icons{
+            text-align: center;
+            background-color: #ece8e8;
+            height: 60px;
+            padding-top: 10px;
+        }
+        .footer-icons a{
+            margin: 6px;
+            color: black;
+        }
+        .footer-icons p{
+            padding-top: 6px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="#"><i class="fa fa-plane"></i></a>
+            <span>Scenicwonderers</span>
+        </div>
+        <div class="link-1 link"><a href="index.html">Home</a>
+        </div>
+        <div class="link-2 link"><a href="about.html">About</a>
+        </div>
+        <div class="link-3 link"><a href="contact.html">Contact</a>
+        </div>
+        <div class="link-4 link"><a href="gallery.html">Gallery</a>
+        </div>
+        <div class="link-5 link"><a href="pricing.html">pricing</a>
+        </div>
+        <div class="link">
+            <input type="text" placeholder="Username">
+            <input type="text" placeholder="password">
+        </div>
+        <div class="register">
+            <button class="btn">Login</button>
+            <button class="btn-2 btn">Register</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box1 box">
+            <div class="text-1">
+                <p>Contact our team</p>
+                <p>Reach out to us for assistance at</p>
+            </div>
+            <div class="text-2">
+                <p><img src="check-mark.png" alt="image not found"> Reach out to us for travel magic and seamless
+                    adventures tailored just for you</p>
+                <hr>
+                <p> <img src="check-mark.png" alt="image not found">Adventure awaits contact us for tailor-made
+                    travel
+                    experiences
+                </p>
+                <hr>
+                <p> <img src="check-mark.png" alt="image not found"> Explore seamless travel experiences—contact us
+                    for
+                    inquiries and support.</p>
+            </div>
+            <div class="box1-footer">
+                <p>Looking for support</p>
+                <span>
+                    <a href="#link">
+                        <img src="whatsapp(1).png" alt="image not found"></a>
+                </span>
+                <span>
+                    <a href="#link">
+                        <img src="in.png" alt="image not found"> </a>
+                </span>
+                <span>
+                    <a href="#link">
+                        <img src="gmail.png" alt="image not found"></a>
+                </span>
+                <span>
+                    <a href="#link">
+                        <img src="phone.png" alt="image not found"></a>
+                </span>
+                </p>
+            </div>
+
+        </div>
+        <div class="box2 box">
+            <form action="action.js">
+                <div class="Name text">
+                    <p>
+                        <label for="name" id="label-text">First name</label>
+                    </p>
+                    <input type="text" placeholder="First Name" id="input-text">
+                    <div class="lastname text">
+                        <p>
+                            <label for="name" id="label-text">Last Name
+                        </p>
+                        <input type="text" placeholder="Last Name" id="input-text">
+                    </div>
+                </div>
+                <div class="email text">
+                    <p>
+                        <label for="email" id="label-text">Work Email</label>
+                    </p>
+                    <input type="text" placeholder="Email" id="input-text">
+                </div>
+                <div class="phone text">
+                    <p>
+                        <label for="phone" id="label-text">Phone Number</label>
+                    </p>
+                    <input type="text" placeholder="Phone Number" id="input-text">
+                </div>
+                <div class="custom-select text">
+                    <p>Select your query</p>
+                    <select>
+                        <!--<option value="0">Select your query</option>-->
+                        <option value="1">Technical support</option>
+                        <option value="2">Collaborations and partenerships</option>
+                        <option value="3">Travel Insurance Questions</option>
+                        <option value="4">Travel Safety and Health Guidelines</option>
+                        <option value="5">Photography or Videography Services</option>
+                        <option value="6">Travel guide</option>
+                        <option value="7">Destination Information Request</option>
+                        <option value="8">Other</option>
+                    </select>
+                </div>
+                <div class="Message text">
+                    <p>Message</p>
+                    <textarea name="feedback" id="feedback" cols="40" rows="8" class="text"> Tell us about your travel plans
+                    </textarea>
+                </div>
+                <div class="message-btn">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer-icons">
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <p>Copyright&copy;-All Rights Reserved-Created by Mohammad Salim</p>
+    </div>
+</body>
+
+</html>

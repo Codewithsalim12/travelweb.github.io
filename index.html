@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Scenicwonderers</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            gap: 30px;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 9;
+        }
+
+        .link a {
+            color: black;
+            text-decoration: none;
+            margin: 12px;
+            font-size: 0.9em;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .link a:hover {
+            color: red;
+        }
+
+        .logo {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: back;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .logo a {
+            color: black;
+        }
+
+        .logo:hover {
+            color: red;
+        }
+
+        .link input {
+            text-align: center;
+            width: 80px;
+            padding: 6px;
+            border: none;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            margin: 5px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        .btn {
+            background-color: rgb(67, 84, 240);
+            color: black;
+            text-align: center;
+            padding: 6px;
+            width: 80px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .btn:hover {
+            background-color: rgb(255, 11, 11);
+            color: #fff;
+        }
+
+        .btn-2 {
+            background-color: rgb(255, 11, 11);
+        }
+
+        .btn-2:hover {
+            background-color: rgb(67, 84, 240);
+        }
+
+        @media only screen and (max-width:800px) {
+            .header {
+                height: 80vh;
+                justify-content:flex-start;
+                flex-direction: column;
+                flex-wrap: wrap;
+                background-color: #000000;
+                border-radius: 2px;
+            }
+
+            .link a {
+                background: #000000;
+                color: #f7f7f7;
+                width: 100%;
+            }
+
+            .logo {
+                background: #2e9133;
+                color: #ffffff;
+                padding: 10px;
+                width: 100%;
+            }
+             .btn{
+                margin: 5px;
+             }
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            width: 100%;
+            background-image: url(https://images.unsplash.com/photo-1571863533956-01c88e79957e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            box-sizing: border-box;
+            filter: contrast(100%);
+        }
+
+        .main-text {
+            color: #000000;
+            font-family: 'Josefin Sans', sans-serif;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .main-text p:first-child {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .main-text p:nth-child(2) {
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .main-btn {
+            text-align: center;
+            background-color: transparent;
+            border-radius: 40px;
+            font-size: 0.8em;
+            cursor: pointer;
+            padding: 8px 15px;
+            margin-top: 10px;
+            background-color: ghostwhite;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        .main-btn a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.9em;
+        }
+
+        .main-btn:hover {
+            box-sizing: border-box;
+            background-color: rgb(10, 228, 61);
+            border: none;
+        }
+
+        .footer-icons {
+            text-align: center;
+            background-color: #ece8e8;
+            height: 53px;
+            padding-top: 10px;
+        }
+
+        .footer-icons a {
+            margin: 6px;
+            color: black;
+        }
+
+        .footer-icons p {
+            padding-top: 6px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="#"><i class="fa fa-plane"></i></a>
+            <span>Scenicwonderers</span>
+        </div>
+        <div class="link-1 link"><a href="index.html">Home</a></div>
+        <div class="link-1 link"><a href="about.html">About</a></div>
+        <div class="link-1 link"><a href="contact.html">Contact</a>
+        </div>
+        <div class="link-1 link"><a href="gallery.html">Gallery</a>
+        </div>
+        <div class="link-1 link"><a href="pricing.html">pricing</a>
+        </div>
+        <div class="link">
+            <input type="text" placeholder="Username">
+            <input type="text" placeholder="password">
+            <button class="btn">Login</button>
+            <button class="btn-2 btn">Register</button>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="main-text">
+            <p> Explore the Extraordinary with Scenicwonderers</p>
+            <p>Transform Your Wanderlust into Unforgettable Journeys Explore, dream, and discover with our tailored
+                Travel Experiences
+            </p>
+            <button class="main-btn"><a href="#">Register now</a></button>
+        </div>
+    </div>
+    <div class="footer-icons">
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <p>Copyright&copy;-All Rights Reserved-Created by Mohammad Salim</p>
+    </div>
+</body>
+
+</html>

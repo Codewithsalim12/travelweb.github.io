@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pricing-scenicwonderers</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            gap: 30px;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 9;
+        }
+
+        .link a {
+            color: black;
+            text-decoration: none;
+            margin: 12px;
+            font-size: 0.9em;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .link a:hover {
+            color: #ff0000;
+        }
+
+        .logo {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: black;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .logo:hover {
+            color: #ff0000;
+        }
+
+        .logo a {
+            color: black;
+        }
+
+        .link input {
+            text-align: center;
+            width: 80px;
+            padding: 6px;
+            border: none;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            margin: 2px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        .btn {
+            background-color: rgb(67, 84, 240);
+            color: black;
+            text-align: center;
+            padding: 6px;
+            width: 80px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            margin: 2px;
+        }
+
+        .btn:hover {
+            background-color: rgb(255, 11, 11);
+            color: #fff;
+        }
+
+        .btn-2 {
+            background-color: rgb(255, 11, 11);
+        }
+
+        .btn-2:hover {
+            background-color: rgb(67, 84, 240);
+        }
+
+        @media only screen and (max-width:800px) {
+            .header {
+                height: 80vh;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                background-color: #ece8e8;
+                border-radius: 2px;
+                position: unset;
+            }
+
+            .link a,
+            .logo {
+                color: black;
+            }
+        }
+
+        .pricing-heading {
+            height: 50vh;
+            border-image-width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0px 40px;
+            box-sizing: border-box;
+            background-image: url(https://images.unsplash.com/photo-1613243555988-441166d4d6fd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Josefin Sans', sans-serif;
+            filter: grayscale(60%);
+            box-sizing: border-box;
+        }
+
+        .pricing-text p {
+            margin-top: 5px;
+        }
+
+        .pricing-text p:first-child {
+            font-size: 2em;
+        }
+
+        .pricing-btn {
+            padding: 5px 20px;
+            text-align: center;
+        }
+
+        .pricing-text button {
+            background-color: black;
+            color: #fff;
+            font-family: 'Josefin Sans', sans-serif;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .pricing-text button:hover {
+            background-color: magenta;
+        }
+
+        .pricing-cards-heading {
+            text-align: center;
+            margin: 20px 0px;
+        }
+
+        .pricing-cards-heading p:first-child {
+            font-size: 2.6em;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .pricing-cards-heading p:nth-child(2) {
+            color: red;
+            font-size: 0.9em;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .pricing-card {
+            display: flex;
+            justify-content: center;
+            height: auto;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 70px;
+            padding: 50px 0px;
+            /*background-image: url(https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgb(204, 180, 180);*/
+        }
+
+        .cards {
+            height: 340px;
+            width: 230px;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+            font-family: 'Josefin Sans', sans-serif;
+            overflow: hidden;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+
+        }
+
+        @media only screen and(max-width:800px) {
+            .cards {
+                width: 80%;
+            }
+        }
+
+        .cards img {
+            float: left;
+            padding: 4px;
+            color: blue;
+        }
+
+        .card-items {
+            padding-top: 50px;
+            height: 170px;
+        }
+
+        .card-items p:nth-child(1) {
+            font-size: 1.5em;
+        }
+
+        .card-items p:nth-child(2) {
+            font-size: 3em;
+            color: #000000;
+        }
+
+        .card-items p:nth-child(2):before {
+            content: '$';
+        }
+
+        .card-item-1 {
+            background-color: rgba(0, 255, 195, 0.65);
+        }
+
+        .card-item-2 {
+            background-color: rgb(255, 0, 157);
+        }
+
+        .card-item-3 {
+            backgroun2-color: rgb(0, 245, 110);
+        }
+
+        .text-2 {
+            background-color: transparent;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 0.9em;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .text-2 button {
+            background-color: rgb(255, 0, 212);
+            color: black;
+            font-family: 'Josefin Sans', sans-serif;
+            padding: 4px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .text-2 button:hover {
+            background-color: #f0d0d0;
+        }
+        .footer-icons{
+            text-align: center;
+            background-color: #ece8e8;
+            height: 60px;
+            padding-top: 10px;
+        }
+        .footer-icons a{
+            margin: 6px;
+            color: black;
+        }
+        .footer-icons p{
+            padding-top: 6px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="#"><i class="fa fa-plane"></i></a>
+            <span>Scenicwonderers</span>
+        </div>
+        <div class="link-1 link"><a href="index.html">Home</a></div>
+        <div class="link-1 link"><a href="about.html">About</a></div>
+        <div class="link-1 link"><a href="contact.html">Contact</a>
+        </div>
+        <div class="link-1 link"><a href="gallery.html">Gallery</a>
+        </div>
+        <div class="link-1 link"><a href="pricing.html">pricing</a>
+        </div>
+        <div class="link">
+            <input type="text" placeholder="Username">
+            <input type="text" placeholder="password">
+            <button class="btn">Login</button>
+            <button class="btn-2 btn">Register</button>
+        </div>
+    </div>
+    <div class="pricing-heading">
+        <div class="pricing-text">
+            <p> Explore Our Transparent Shorts Pricing</p>
+            <p>Explore seamless adventures with transparent pricing– no hidden fees,</p>
+            <p>just straightforward costs for unforgettable travel experiences.</p>
+            <p><button class="pricing-btn">Free Trail</button></p>
+        </div>
+    </div>
+    <div class="pricing-cards-heading">
+        <p>Plans</p>
+        <p>-What we offer-</p>
+    </div>
+    <div class="pricing-card">
+        <div class="card-1 cards">
+            <img src="free.png" alt="mage not found" width="50">
+            <div class="card-items card-item-1">
+                <p>Basic</p>
+                <p>14</p>
+            </div>
+            <div class="text-2 card-item-1-text">
+                <p>Complimentary DSLR and basic camping gear for a budget-friendly adventure.</p>
+                <button>Try Free Trail</button>
+            </div>
+        </div>
+        <div class="card-2 cards">
+            <img src="crown.png" alt="image not found" width="50">
+            <div class="card-items card-item-2">
+                <p>Standard</p>
+                <p>99</p>
+            </div>
+            <div class="text-2 card-item-2-text">
+                <p>Upgrade to premium for $99/day with a top-tier DSLR camera and enhanced camping gear.</p>
+                <button>Standard</button>
+            </div>
+        </div>
+        <div class="card-3 cards">
+            <img src="premium-quality.png" alt="image not found" width="50">
+            <div class="card-item-2 card-items">
+                <p>Premium</p>
+                <p>199</p>
+            </div>
+            <div class="text-2 card-item-3-text">
+                <p>Indulge in luxury at $199/day with a top-tier DSLR camera, gimbal, and deluxe camping gear.</p>
+                <button>Ultra Premium</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-icons">
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <p>Copyright&copy;-All Rights Reserved-Created by Mohammad Salim</p>
+    </div>
+</body>
+
+</html>

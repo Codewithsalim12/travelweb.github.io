@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> About-Scenicwonderers</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            gap: 30px;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 9;
+        }
+
+        .link a {
+            color: black;
+            text-decoration: none;
+            margin: 12px;
+            font-size: 0.9em;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .link a:hover {
+           color: red;
+        }
+
+        .logo {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: black;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .logo:hover {
+           color: red;
+        }
+        .logo a{
+            color:black;
+        }
+
+        .link input {
+            text-align: center;
+            width: 80px;
+            padding: 6px;
+            border: none;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            margin: 5px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        .btn {
+            background-color: rgb(67, 84, 240);
+            color: black;
+            text-align: center;
+            padding: 6px;
+            width: 80px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .btn:hover {
+            background-color: rgb(255, 11, 11);
+            color: #fff;
+        }
+
+        .btn-2 {
+            background-color: rgb(255, 11, 11);
+        }
+
+        .btn-2:hover {
+            background-color: rgb(67, 84, 240);
+        }
+
+        @media only screen and (max-width:800px) {
+            .header {
+                height: 70vh;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                background-color: #eedada;
+                border-radius: 2px;
+                position: unset;
+            }
+
+            .link a,
+            .logo {
+                color: black;
+            }
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            width: 100%;
+            background-image: url(https://images.unsplash.com/photo-1458170143129-546a3530d995?q=80&w=1477&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom: 20px;
+        }
+
+        .about-text {
+            text-align: center;
+            width: 65vw;
+            color: #000000;
+        }
+
+        .about-text p:first-child {
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .about-text p:nth-child(2) {
+            margin-top: 1rem;
+            font-size: 1em;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #000000;
+        }
+
+        @media only screen and(max-width:800px) {
+            .about-content {
+                flex-wrap: wrap;
+                flex-direction: column;
+                width: 95%;
+            }
+        }
+
+        .container {
+            height: 70vh;
+            width: 95%;
+            margin: 0px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 54px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .box1 {
+            width: 350px;
+            height: 250px;
+            box-sizing: border-box;
+        }
+
+        .box1 img {
+            width: 100%;
+            height: 100%;
+            filter: contrast(100%);
+            filter: grayscale(40%);
+        }
+
+        .box2 {
+            width: 500px;
+            padding: 10px;
+            color: #6c757d;
+            box-sizing: border-box;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .box2 span:nth-child(2) {
+            color: #6c757d;
+        }
+
+        @media only screen and (max-width:800px) {
+            .container {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 129vh;
+            }
+
+            .box1 {
+                margin-top: 20px;
+            }
+
+        }
+
+        .about-btn {
+            margin-top: 10px;
+        }
+
+        .about-btn button {
+            background-color: blue;
+            color: #fff;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 1px;
+            border: none;
+            box-sizing: border-box;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .about-btn button:hover {
+            background-color: rgb(158, 149, 149);
+            color: black;
+        }
+
+        .box2-text p:first-child {
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            color: black;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .container-02 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 20px;
+            height: 100%;
+            width: 95%;
+            margin: 0px auto;
+            box-sizing: border-box;
+        }
+
+        #box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container-02-box1 {
+            height: 100%;
+            width: 500px;
+            padding: 10px;
+            color: #6c757d;
+            box-sizing: border-box;
+            font-family: 'Josefin Sans', sans-serif;
+            margin-top: 90px;
+            background-color: #fcfcfc;
+        }
+
+        .container-02-box1 span:nth-child(2) {
+            color: #6c757d;
+        }
+
+        .container-02-box2 {
+            width: 400px;
+            height: 230px;
+            margin-top: 49px;
+            box-sizing: border-box;
+        }
+
+        .container-02-box2 iframe {
+            width: 100%;
+            filter: contrast(100%);
+            filter: grayscale(20%);
+            filter: brightness(1);
+        }
+
+        @media only screen and(max-width:800px) {
+            .container-02-box1 {
+                margin-top: 40px;
+            }
+        }
+
+        .cards-heading {
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Josefin Sansa', sans-serif;
+            font-size: 2em;
+            color: black;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-top: 12px;
+        }
+
+        .cards-heading p:nth-child(2) {
+            font-size: 0.4em;
+            color: red;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            gap: 20px;
+            flex-direction: row;
+            padding: 30px;
+            box-sizing: border-box;
+            margin-top: 12px;
+        }
+
+        .card {
+            height: 100%;
+            width: 260px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            text-align: center;
+            font-family: 'Josefin Sans', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .card img {
+            width: 100%;
+            filter: grayscale(40%);
+        }
+
+        .card p:nth-child(2) {
+            font-weight: bold;
+            font-size: 1em;
+            margin-top: 6px;
+        }
+
+        .card p:nth-child(3) {
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-top: 15px;
+            color: gray;
+        }
+
+        .card p:nth-child(4) {
+            font-size: 0.8em;
+            margin-top: 10px;
+        }
+
+        .card p:nth-child(5) {
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        .card2 img{
+            filter: contrast(140%);
+            filter: grayscale(20%);
+        }
+
+        .card button {
+            background-color: blue;
+            color: #fff;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: bold;
+            padding: 5px 50px;
+            text-align: center;
+            border-radius: 2px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card button:hover {
+            background-color: magenta;
+            color: #fff;
+        }
+
+        .footer-icons{
+            text-align: center;
+            background-color: #ece8e8;
+            height: 60px;
+            padding-top: 10px;
+        }
+        .footer-icons a{
+            margin: 6px;
+            color: black;
+        }
+        .footer-icons p{
+            padding-top: 6px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="#"><i class="fa fa-plane"></i></a>
+            <span>Scenicwonderers</span>
+        </div>
+        <div class="link-1 link">
+            <a href="index.html">Home</a>
+        </div>
+        <div class="link-1 link">
+            <a href="about.html">About</a>
+        </div>
+        <div class="link-1 link">
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="link-1 link">
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <div class="link-1 link">
+            <a href="pricing.html">pricing</a>
+        </div>
+        <div class="link">
+            <input type="text" placeholder="Username">
+            <input type="text" placeholder="password">
+            <button class="btn">Login</button>
+            <button class="btn-2 btn">Register</button>
+        </div>
+    </div>
+    <div class="about-content">
+        <div class="about-text">
+            <p>About Us</p>
+            <p>Embark on a journey of discovery with our travel platform, where wanderlust meets seamless exploration.
+                Explore captivating destinations, curated itineraries, and handpicked accommodations for an
+                unforgettable adventure. Let us be your guide to creating memories that last a lifetime."</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box1 box">
+            <img src="https://plus.unsplash.com/premium_photo-1664297760684-bba7d64a0a33?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fHw%3D"
+                alt="">
+        </div>
+        <div class="box2 box">
+            <div class="box2-text">
+                <p> <span>"Passionately Connecting the World:</span>
+                    <span>Your Gateway to Unforgettable Adventures."</span>
+                </p>
+                <p>"Welcome to Scenicwonderers, where wanderlust meets seamless exploration. Our journey began with a
+                    passion for creating transformative travel experiences that go beyond the ordinary. Whether you seek
+                    the serenity of exotic landscapes, the thrill of adventure, or the richness of cultural immersion,
+                    we are here to curate the perfect voyage for you. With a commitment to excellence, we strive to
+                    unlock the world's wonders and deliver unforgettable moments that linger in your heart. Join us as
+                    we redefine travel, one extraordinary adventure at a time."</p>
+                <!--<div class="about-btn"><button>Read more...</button></div>-->
+            </div>
+        </div>
+    </div>
+    <div class="container-02">
+        <div class="container-02-box1" id="box">
+            <div class="box2-text">
+                <p> <span>"Embark on a Journey with Us:</span>
+                    <span> Discover, Explore, and Create Lifelong Memories."</span>
+                </p>
+                <p>"At Scenicwonderers, we believe that travel is not just about reaching a destination; it's about
+                    embracing the journey and savoring every moment. Our platform is designed to be your trusted
+                    companion on this voyage, offering a diverse array of handpicked destinations, curated itineraries,
+                    and personalized services. Whether you're a solo explorer, a couple seeking a romantic getaway, or a
+                    family yearning for shared experiences, we tailor each adventure to your desires. Let us be your
+                    passport to a world of discovery, where every adventure tells a unique story and every destination
+                    leaves an indelible mark on your soul."</p>
+                <div class="about-btn"><button>Read more...</button></div>
+            </div>
+        </div>
+        <div class="container-02-box2" id="box">
+            <iframe src="https://www.youtube.com/embed/0mZiyN9wbzs?si=M7YtVFwt03AqngQ2" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="cards-heading">
+        <p>Our team</p>
+        <p>--Who we are--</p>
+    </div>
+    <div class="cards-container">
+        <div class="card1 card">
+            <img src="https://media.istockphoto.com/id/1225115800/photo/stylish-man-on-rooftop-during-sunset.webp?s=170667a&w=0&k=20&c=f-gZa83PIM5loFalNVBRo_ppXnL73EYRG9g8Arauk_c="
+                alt="image not found">
+            <p>John Doe</p>
+            <p>CEO andFounder</p>
+            <p>Harvad University</p>
+            <p> 
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+            </p>
+            <button>Contact</button>
+        </div>
+        <div class="card2 card"><img
+                src="sameer.jpg"
+                alt="image not found">
+            <p>Umer Mukhtar</p>
+            <p>Freelancer and
+                photographer</p>
+            <p>LTSU University</p>
+            <p> <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+            </p>
+            <button>Contact</button>
+        </div>
+        <div class="card4 card"><img src="saleem.jpg" alt="">
+            <p>Mohammad salim</p>
+            <p>Web and App Developer </p>
+            <p>IIT Dehli</p>
+            <p> <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            </p>
+            <button>Contact</button>
+        </div>
+    </div>
+    <div class="footer-icons">
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <p>Copyright&copy;-All Rights Reserved-Created by Mohammad Salim</p>
+    </div>
+</body>
+
+</html>
